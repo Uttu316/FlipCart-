@@ -1,6 +1,7 @@
 
 .categories_wrapper{
     margin-top: 20px;
+    position: relative;
 }
 .category{
     display: flex;
@@ -16,3 +17,4 @@
 .category .category_label{
     margin-top: 4px;
 }
+

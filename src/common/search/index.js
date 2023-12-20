@@ -7,6 +7,7 @@ const SearchBar = () => {
       disablePortal
       id="searchbar"
       options={options}
+      popupIcon={null}
       sx={{ width: 500, borderRadius: 12 }}
       renderInput={(params) => (
         <TextField {...params} placeholder="Search for Products" />

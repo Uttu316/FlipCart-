@@ -5,7 +5,7 @@ import "./categories.css";
 
 const Categories = () => {
   return (
-    <section className="categories_wrapper">
+    <section className="categories_wrapper container">
       <Card
         sx={{
           display: "flex",

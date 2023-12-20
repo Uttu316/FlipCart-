@@ -1,5 +1,7 @@
 import { Popover, Typography } from "@mui/material";
 import React, { useState } from "react";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const AccountMenu = () => {
   const [el, setEl] = useState(null);
@@ -18,16 +20,17 @@ const AccountMenu = () => {
         aria-haspopup="true"
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
+        sx={{
+          alignItems: "center",
+          display: "flex",
+          border: !!el ? "1px solid lightgray" : undefined,
+          padding: 1,
+          paddingRight: 0,
+          borderRadius: 2,
+          backgroundColor: !!el && "rgba(0,0,0,0.3)",
+        }}
       >
-        Account{" "}
-        <span
-          style={{
-            rotate: el ? "0deg" : "180deg",
-            display: "inline-block",
-          }}
-        >
-          ^
-        </span>
+        Account {!!el ? <ExpandLessIcon /> : <ExpandMoreIcon />}
       </Typography>
       <Popover
         id="account-menu-popover"
